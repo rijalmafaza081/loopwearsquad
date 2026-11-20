@@ -6,7 +6,7 @@ const products = [
         name: "Loop Tee Classic",
         category: "kaos",
         price: 219000,
-        image: "https://picsum.photos/id/101/500/500",
+        image: "images/kaos.jpg",
         description: "Classic crew neck t-shirt",
         attributes: {
             Ukuran: ["S", "M", "L", "XL"],
@@ -18,7 +18,7 @@ const products = [
         name: "Weave Boxy Tee",
         category: "kaos",
         price: 229000,
-        image: "https://picsum.photos/id/102/500/500",
+        image: "images/kaos.jpg",
         description: "Boxy fit t-shirt with textured weave",
         attributes: {
             Ukuran: ["S", "M", "L", "XL"],
@@ -30,7 +30,7 @@ const products = [
         name: "Squad Graphic Tee",
         category: "kaos",
         price: 239000,
-        image: "https://picsum.photos/id/103/500/500",
+        image: "images/kaos.jpg",
         description: "Graphic print t-shirt",
         attributes: {
             Ukuran: ["S", "M", "L", "XL"],
@@ -42,7 +42,7 @@ const products = [
         name: "Oversized Heavy Tee",
         category: "kaos",
         price: 249000,
-        image: "https://picsum.photos/id/104/500/500",
+        image: "images/kaos.jpg",
         description: "Heavyweight oversized t-shirt",
         attributes: {
             Ukuran: ["S", "M", "L", "XL"],
@@ -55,7 +55,7 @@ const products = [
         name: "Everyday Hoodie",
         category: "hoodie",
         price: 269000,
-        image: "https://picsum.photos/id/201/500/500",
+        image: "images/hoodie.jpg",
         description: "Comfortable everyday hoodie",
         attributes: {
             Ukuran: ["S", "M", "L", "XL"],
@@ -67,7 +67,7 @@ const products = [
         name: "Loop Zip Hoodie",
         category: "hoodie",
         price: 279000,
-        image: "https://picsum.photos/id/202/500/500",
+        image: "images/hoodie.jpg",
         description: "Full zip hoodie with loop details",
         attributes: {
             Ukuran: ["S", "M", "L", "XL"],
@@ -79,7 +79,7 @@ const products = [
         name: "Squad Pullover Hoodie",
         category: "hoodie",
         price: 289000,
-        image: "https://picsum.photos/id/203/500/500",
+        image: "images/hoodie.jpg",
         description: "Classic pullover hoodie",
         attributes: {
             Ukuran: ["S", "M", "L", "XL"],
@@ -91,7 +91,7 @@ const products = [
         name: "Weave Boxy Hoodie",
         category: "hoodie",
         price: 299000,
-        image: "https://picsum.photos/id/204/500/500",
+        image: "images/hoodie.jpg",
         description: "Boxy fit textured hoodie",
         attributes: {
             Ukuran: ["S", "M", "L", "XL"],
@@ -104,7 +104,7 @@ const products = [
         name: "Loop Knit Vest",
         category: "knitwear",
         price: 239000,
-        image: "https://picsum.photos/id/301/500/500",
+        image: "images/knitwear.jpg",
         description: "Knit vest with loop detailing",
         attributes: {
             Ukuran: ["S", "M", "L", "XL"],
@@ -116,7 +116,7 @@ const products = [
         name: "Weave Knit Sweater",
         category: "knitwear",
         price: 279000,
-        image: "https://picsum.photos/id/302/500/500",
+        image: "images/knitwear.jpg",
         description: "Textured knit sweater",
         attributes: {
             Ukuran: ["S", "M", "L", "XL"],
@@ -128,7 +128,7 @@ const products = [
         name: "Cable Knit Pullover",
         category: "knitwear",
         price: 289000,
-        image: "https://picsum.photos/id/303/500/500",
+        image: "images/knitwear.jpg",
         description: "Classic cable knit pullover",
         attributes: {
             Ukuran: ["S", "M", "L", "XL"],
@@ -140,7 +140,7 @@ const products = [
         name: "Squad Cardigan",
         category: "knitwear",
         price: 299000,
-        image: "https://picsum.photos/id/304/500/500",
+        image: "images/knitwear.jpg",
         description: "Cozy cardigan with front pockets",
         attributes: {
             Ukuran: ["S", "M", "L", "XL"],
