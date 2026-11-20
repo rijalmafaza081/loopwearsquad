@@ -5,7 +5,7 @@ const products = [
         name: "Urban T-Shirt",
         category: "men",
         price: 129000,
-        image: "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?w=500&h=500&fit=crop",
+        image: "https://picsum.photos/id/101/500/500",
         description: "Comfortable urban t-shirt"
     },
     {
@@ -13,7 +13,7 @@ const products = [
         name: "Oversized Hoodie",
         category: "men",
         price: 249000,
-        image: "https://images.unsplash.com/photo-1556821552-5ff63b1b0e59?w=500&h=500&fit=crop",
+        image: "https://picsum.photos/id/102/500/500",
         description: "Cozy oversized hoodie"
     },
     {
@@ -21,7 +21,7 @@ const products = [
         name: "Streetwear Jacket",
         category: "men",
         price: 299000,
-        image: "https://images.unsplash.com/photo-1551028719-00167b16ebc5?w=500&h=500&fit=crop",
+        image: "https://picsum.photos/id/103/500/500",
         description: "Stylish streetwear jacket"
     },
     {
@@ -29,7 +29,7 @@ const products = [
         name: "Premium Jeans",
         category: "men",
         price: 199000,
-        image: "https://images.unsplash.com/photo-1542272604-787c62d465d1?w=500&h=500&fit=crop",
+        image: "https://picsum.photos/id/104/500/500",
         description: "Premium quality jeans"
     },
     {
@@ -37,7 +37,7 @@ const products = [
         name: "Floral Dress",
         category: "women",
         price: 189000,
-        image: "https://images.unsplash.com/photo-1595777712802-14158a84b64a?w=500&h=500&fit=crop",
+        image: "https://picsum.photos/id/201/500/500",
         description: "Elegant floral dress"
     },
     {
@@ -45,7 +45,7 @@ const products = [
         name: "Yoga Leggings",
         category: "women",
         price: 149000,
-        image: "https://images.unsplash.com/photo-1556821552-5ff63b1b0e59?w=500&h=500&fit=crop",
+        image: "https://picsum.photos/id/202/500/500",
         description: "Comfortable yoga leggings"
     },
     {
@@ -53,7 +53,7 @@ const products = [
         name: "Silk Blouse",
         category: "women",
         price: 229000,
-        image: "https://images.unsplash.com/photo-1572802419224-291b03597359?w=500&h=500&fit=crop",
+        image: "https://picsum.photos/id/203/500/500",
         description: "Luxurious silk blouse"
     },
     {
@@ -61,7 +61,7 @@ const products = [
         name: "Denim Skirt",
         category: "women",
         price: 159000,
-        image: "https://images.unsplash.com/photo-1543163521-1bf539c55dd2?w=500&h=500&fit=crop",
+        image: "https://picsum.photos/id/204/500/500",
         description: "Classic denim skirt"
     },
     {
@@ -69,7 +69,7 @@ const products = [
         name: "Leather Belt",
         category: "accessories",
         price: 179000,
-        image: "https://images.unsplash.com/photo-1553062407-98eeb64c6a62?w=500&h=500&fit=crop",
+        image: "https://picsum.photos/id/301/500/500",
         description: "Genuine leather belt"
     },
     {
@@ -77,7 +77,7 @@ const products = [
         name: "Stylish Sunglasses",
         category: "accessories",
         price: 249000,
-        image: "https://images.unsplash.com/photo-1572635196237-14b3f281503f?w=500&h=500&fit=crop",
+        image: "https://picsum.photos/id/302/500/500",
         description: "Trendy sunglasses"
     },
     {
@@ -85,7 +85,7 @@ const products = [
         name: "Leather Wallet",
         category: "accessories",
         price: 199000,
-        image: "https://images.unsplash.com/photo-1608252787056-362f0f9324ec?w=500&h=500&fit=crop",
+        image: "https://picsum.photos/id/303/500/500",
         description: "Genuine leather wallet"
     },
     {
@@ -93,7 +93,7 @@ const products = [
         name: "Canvas Cap",
         category: "accessories",
         price: 129000,
-        image: "https://images.unsplash.com/photo-1516728180891-5f5bfa097dc0?w=500&h=500&fit=crop",
+        image: "https://picsum.photos/id/304/500/500",
         description: "Classic canvas cap"
     }
 ];
