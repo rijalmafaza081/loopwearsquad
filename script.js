@@ -1,100 +1,151 @@
-// Sample Products Data - Range 100-300 ribu
+// Sample Products Data - Range 219-299 ribu
 const products = [
+    // Kategori Kaos
     {
         id: 1,
-        name: "Urban T-Shirt",
-        category: "men",
-        price: 129000,
+        name: "Loop Tee Classic",
+        category: "kaos",
+        price: 219000,
         image: "https://picsum.photos/id/101/500/500",
-        description: "Comfortable urban t-shirt"
+        description: "Classic crew neck t-shirt",
+        attributes: {
+            Ukuran: ["S", "M", "L", "XL"],
+            Warna: ["Hitam", "Putih", "Krem", "Sage"]
+        }
     },
     {
         id: 2,
-        name: "Oversized Hoodie",
-        category: "men",
-        price: 249000,
+        name: "Weave Boxy Tee",
+        category: "kaos",
+        price: 229000,
         image: "https://picsum.photos/id/102/500/500",
-        description: "Cozy oversized hoodie"
+        description: "Boxy fit t-shirt with textured weave",
+        attributes: {
+            Ukuran: ["S", "M", "L", "XL"],
+            Warna: ["Hitam", "Putih", "Krem", "Sage"]
+        }
     },
     {
         id: 3,
-        name: "Streetwear Jacket",
-        category: "men",
-        price: 299000,
+        name: "Squad Graphic Tee",
+        category: "kaos",
+        price: 239000,
         image: "https://picsum.photos/id/103/500/500",
-        description: "Stylish streetwear jacket"
+        description: "Graphic print t-shirt",
+        attributes: {
+            Ukuran: ["S", "M", "L", "XL"],
+            Warna: ["Hitam", "Putih", "Krem", "Sage"]
+        }
     },
     {
         id: 4,
-        name: "Premium Jeans",
-        category: "men",
-        price: 199000,
+        name: "Oversized Heavy Tee",
+        category: "kaos",
+        price: 249000,
         image: "https://picsum.photos/id/104/500/500",
-        description: "Premium quality jeans"
+        description: "Heavyweight oversized t-shirt",
+        attributes: {
+            Ukuran: ["S", "M", "L", "XL"],
+            Warna: ["Hitam", "Putih", "Krem", "Sage"]
+        }
     },
+    // Kategori Hoodie
     {
         id: 5,
-        name: "Floral Dress",
-        category: "women",
-        price: 189000,
+        name: "Everyday Hoodie",
+        category: "hoodie",
+        price: 269000,
         image: "https://picsum.photos/id/201/500/500",
-        description: "Elegant floral dress"
+        description: "Comfortable everyday hoodie",
+        attributes: {
+            Ukuran: ["S", "M", "L", "XL"],
+            Warna: ["Hitam", "Putih", "Krem", "Sage"]
+        }
     },
     {
         id: 6,
-        name: "Yoga Leggings",
-        category: "women",
-        price: 149000,
+        name: "Loop Zip Hoodie",
+        category: "hoodie",
+        price: 279000,
         image: "https://picsum.photos/id/202/500/500",
-        description: "Comfortable yoga leggings"
+        description: "Full zip hoodie with loop details",
+        attributes: {
+            Ukuran: ["S", "M", "L", "XL"],
+            Warna: ["Hitam", "Putih", "Krem", "Sage"]
+        }
     },
     {
         id: 7,
-        name: "Silk Blouse",
-        category: "women",
-        price: 229000,
+        name: "Squad Pullover Hoodie",
+        category: "hoodie",
+        price: 289000,
         image: "https://picsum.photos/id/203/500/500",
-        description: "Luxurious silk blouse"
+        description: "Classic pullover hoodie",
+        attributes: {
+            Ukuran: ["S", "M", "L", "XL"],
+            Warna: ["Hitam", "Putih", "Krem", "Sage"]
+        }
     },
     {
         id: 8,
-        name: "Denim Skirt",
-        category: "women",
-        price: 159000,
+        name: "Weave Boxy Hoodie",
+        category: "hoodie",
+        price: 299000,
         image: "https://picsum.photos/id/204/500/500",
-        description: "Classic denim skirt"
+        description: "Boxy fit textured hoodie",
+        attributes: {
+            Ukuran: ["S", "M", "L", "XL"],
+            Warna: ["Hitam", "Putih", "Krem", "Sage"]
+        }
     },
+    // Kategori Knitwear
     {
         id: 9,
-        name: "Leather Belt",
-        category: "accessories",
-        price: 179000,
+        name: "Loop Knit Vest",
+        category: "knitwear",
+        price: 239000,
         image: "https://picsum.photos/id/301/500/500",
-        description: "Genuine leather belt"
+        description: "Knit vest with loop detailing",
+        attributes: {
+            Ukuran: ["S", "M", "L", "XL"],
+            Warna: ["Hitam", "Putih", "Krem", "Sage"]
+        }
     },
     {
         id: 10,
-        name: "Stylish Sunglasses",
-        category: "accessories",
-        price: 249000,
+        name: "Weave Knit Sweater",
+        category: "knitwear",
+        price: 279000,
         image: "https://picsum.photos/id/302/500/500",
-        description: "Trendy sunglasses"
+        description: "Textured knit sweater",
+        attributes: {
+            Ukuran: ["S", "M", "L", "XL"],
+            Warna: ["Hitam", "Putih", "Krem", "Sage"]
+        }
     },
     {
         id: 11,
-        name: "Leather Wallet",
-        category: "accessories",
-        price: 199000,
+        name: "Cable Knit Pullover",
+        category: "knitwear",
+        price: 289000,
         image: "https://picsum.photos/id/303/500/500",
-        description: "Genuine leather wallet"
+        description: "Classic cable knit pullover",
+        attributes: {
+            Ukuran: ["S", "M", "L", "XL"],
+            Warna: ["Hitam", "Putih", "Krem", "Sage"]
+        }
     },
     {
         id: 12,
-        name: "Canvas Cap",
-        category: "accessories",
-        price: 129000,
+        name: "Squad Cardigan",
+        category: "knitwear",
+        price: 299000,
         image: "https://picsum.photos/id/304/500/500",
-        description: "Classic canvas cap"
+        description: "Cozy cardigan with front pockets",
+        attributes: {
+            Ukuran: ["S", "M", "L", "XL"],
+            Warna: ["Hitam", "Putih", "Krem", "Sage"]
+        }
     }
 ];
 
@@ -118,19 +169,32 @@ function renderProducts(filter = 'all') {
         ? products 
         : products.filter(p => p.category === filter);
     
-    productsGrid.innerHTML = filtered.map(product => `
+    productsGrid.innerHTML = filtered.map(product => {
+        const attrHtml = product.attributes ? `
+            <div class="product-attributes">
+                ${Object.entries(product.attributes).map(([key, values]) => `
+                    <div class="attribute-group">
+                        <span class="attribute-label">${key}:</span>
+                        <span class="attribute-values">${values.join(', ')}</span>
+                    </div>
+                `).join('')}
+            </div>
+        ` : '';
+        
+        return `
         <div class="product-card">
             <img src="${product.image}" alt="${product.name}" class="product-image" onerror="this.src='https://via.placeholder.com/400?text=${encodeURIComponent(product.name)}'">
             <div class="product-info">
                 <p class="product-category">${product.category}</p>
                 <h3 class="product-name">${product.name}</h3>
                 <p class="product-price">${formatRupiah(product.price)}</p>
+                ${attrHtml}
                 <button class="add-to-cart-btn" onclick="addToCart(${product.id})">
                     <i class="fas fa-plus"></i> Add to Cart
                 </button>
             </div>
         </div>
-    `).join('');
+    `}).join('');
 }
 
 // Add to Cart
@@ -141,17 +205,12 @@ function addToCart(productId) {
     if (existingItem) {
         existingItem.quantity++;
     } else {
-        cart.push({
-            ...product,
-            quantity: 1
-        });
+        cart.push({...product, quantity: 1});
     }
     
     saveCart();
     updateCartCount();
     updateCartDisplay();
-    
-    // Show feedback
     showNotification(`${product.name} added to cart!`);
 }
 
@@ -177,7 +236,7 @@ function updateQuantity(productId, change) {
     }
 }
 
-// Save Cart to LocalStorage
+// Save Cart
 function saveCart() {
     localStorage.setItem('cart', JSON.stringify(cart));
 }
@@ -220,7 +279,7 @@ function updateCartDisplay() {
     cartTotal.textContent = formatRupiah(total);
 }
 
-// Toggle Cart Sidebar
+// Toggle Cart
 function toggleCart() {
     document.getElementById('cartSidebar').classList.toggle('active');
 }
@@ -232,10 +291,7 @@ function checkoutWhatsApp() {
         return;
     }
     
-    // Build order message
-    let message = '*📦 LoopWearSquad Order*\n\n';
-    message += '*Items:*\n';
-    
+    let message = '*📦 LoopWearSquad Order*\n\n*Items:*\n';
     let total = 0;
     cart.forEach(item => {
         const subtotal = item.price * item.quantity;
@@ -243,84 +299,47 @@ function checkoutWhatsApp() {
         message += `• ${item.name} x${item.quantity} = ${formatRupiah(subtotal)}\n`;
     });
     
-    message += `\n*Total: ${formatRupiah(total)}*\n`;
-    message += `\nPlease confirm this order. Thank you!`;
+    message += `\n*Total: ${formatRupiah(total)}*\n\nPlease confirm this order. Thank you!`;
     
-    // Ganti dengan nomor WhatsApp Anda
     const whatsappNumber = '6285748234562';
-    const encodedMessage = encodeURIComponent(message);
-    const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodedMessage}`;
-    
+    const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`;
     window.open(whatsappUrl, '_blank');
 }
 
 // Show Notification
 function showNotification(message) {
     const notification = document.createElement('div');
-    notification.style.cssText = `
-        position: fixed;
-        top: 20px;
-        right: 20px;
-        background: #25D366;
-        color: white;
-        padding: 1rem 2rem;
-        border-radius: 8px;
-        box-shadow: 0 4px 12px rgba(0,0,0,0.15);
-        z-index: 3000;
-        animation: slideIn 0.3s ease;
-    `;
+    notification.style.cssText = 'position:fixed;top:20px;right:20px;background:#25D366;color:white;padding:1rem 2rem;border-radius:8px;box-shadow:0 4px 12px rgba(0,0,0,0.15);z-index:3000;animation:slideIn 0.3s ease;';
     notification.textContent = message;
     document.body.appendChild(notification);
-    
-    setTimeout(() => {
-        notification.remove();
-    }, 3000);
+    setTimeout(() => notification.remove(), 3000);
 }
 
-// Filter Products
+// DOM Ready
 document.addEventListener('DOMContentLoaded', function() {
-    // Initial render
     renderProducts();
     updateCartCount();
     updateCartDisplay();
     
-    // Filter buttons
     document.querySelectorAll('.filter-btn').forEach(btn => {
         btn.addEventListener('click', function() {
             document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
             this.classList.add('active');
-            
             currentFilter = this.dataset.category;
             renderProducts(currentFilter);
         });
     });
     
-    // Smooth scroll for navigation
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener('click', function (e) {
+        anchor.addEventListener('click', function(e) {
             e.preventDefault();
             const target = document.querySelector(this.getAttribute('href'));
-            if (target) {
-                target.scrollIntoView({
-                    behavior: 'smooth'
-                });
-            }
+            if (target) target.scrollIntoView({behavior: 'smooth'});
         });
     });
 });
 
-// Add CSS animation
+// CSS Animation
 const style = document.createElement('style');
-style.textContent = `
-    @keyframes slideIn {
-        from {
-            transform: translateX(400px);
-            opacity: 0;
-        }
-        to {
-            transform: translateX(0);
-            opacity: 1;
-        }
-    }
-`;
+style.textContent = '@keyframes slideIn{from{transform:translateX(400px);opacity:0}to{transform:translateX(0);opacity:1}}';
 document.head.appendChild(style);
