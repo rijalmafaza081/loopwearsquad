@@ -1,0 +1,56 @@
+name: Monitor custom domain PRs
+
+on:
+  schedule:
+    - cron: '*/30 * * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  check-domain:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Check PRs and set CNAME
+        run: |
+          set -e
+          ISADEV=$(curl -s https://api.github.com/repos/is-a-dev/register/pulls/62118)
+          JSORG=$(curl -s https://api.github.com/repos/js-org/js.org/pulls/13035)
+
+          MERGED_ISADEV=$(echo "$ISADEV" | python3 -c "import sys,json; print(json.load(sys.stdin).get('merged', False))")
+          STATE_ISADEV=$(echo "$ISADEV" | python3 -c "import sys,json; print(json.load(sys.stdin).get('state', 'unknown'))")
+          MERGED_JSORG=$(echo "$JSORG" | python3 -c "import sys,json; print(json.load(sys.stdin).get('merged', False))")
+          STATE_JSORG=$(echo "$JSORG" | python3 -c "import sys,json; print(json.load(sys.stdin).get('state', 'unknown'))")
+
+          echo "is-a.dev: state=$STATE_ISADEV merged=$MERGED_ISADEV"
+          echo "js.org:   state=$STATE_JSORG merged=$MERGED_JSORG"
+
+          DOMAIN=""
+          if [ "$MERGED_ISADEV" = "True" ]; then
+            DOMAIN="loopwearsquad.is-a.dev"
+          elif [ "$MERGED_JSORG" = "True" ]; then
+            DOMAIN="loopwearsquad.js.org"
+          fi
+
+          if [ -z "$DOMAIN" ]; then
+            echo "No PR merged yet - nothing to do"
+            exit 0
+          fi
+
+          echo "Setting CNAME to $DOMAIN"
+          echo "$DOMAIN" > CNAME
+
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add CNAME
+
+          if git diff --staged --quiet; then
+            echo "CNAME already set to $DOMAIN - no change"
+          else
+            git commit -m "Set custom domain $DOMAIN"
+            git push
+            echo "CNAME committed and pushed"
+          fi
