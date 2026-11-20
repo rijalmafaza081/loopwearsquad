@@ -1,68 +1,100 @@
-// Sample Products Data
+// Sample Products Data - Range 100-300 ribu
 const products = [
     {
         id: 1,
-        name: "Classic T-Shirt",
+        name: "Urban T-Shirt",
         category: "men",
-        price: 89000,
-        image: "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?w=400&h=400&fit=crop",
-        description: "Comfortable classic t-shirt"
+        price: 129000,
+        image: "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?w=500&h=500&fit=crop",
+        description: "Comfortable urban t-shirt"
     },
     {
         id: 2,
-        name: "Denim Jacket",
+        name: "Oversized Hoodie",
         category: "men",
-        price: 349000,
-        image: "https://images.unsplash.com/photo-1551028719-00167b16ebc5?w=400&h=400&fit=crop",
-        description: "Stylish denim jacket"
+        price: 249000,
+        image: "https://images.unsplash.com/photo-1556821552-5ff63b1b0e59?w=500&h=500&fit=crop",
+        description: "Cozy oversized hoodie"
     },
     {
         id: 3,
-        name: "Women Hoodie",
-        category: "women",
-        price: 199000,
-        image: "https://images.unsplash.com/photo-1556821552-5ff63b1b0e59?w=400&h=400&fit=crop",
-        description: "Cozy women hoodie"
+        name: "Streetwear Jacket",
+        category: "men",
+        price: 299000,
+        image: "https://images.unsplash.com/photo-1551028719-00167b16ebc5?w=500&h=500&fit=crop",
+        description: "Stylish streetwear jacket"
     },
     {
         id: 4,
-        name: "Summer Dress",
-        category: "women",
-        price: 249000,
-        image: "https://images.unsplash.com/photo-1595777712802-14158a84b64a?w=400&h=400&fit=crop",
-        description: "Light summer dress"
+        name: "Premium Jeans",
+        category: "men",
+        price: 199000,
+        image: "https://images.unsplash.com/photo-1542272604-787c62d465d1?w=500&h=500&fit=crop",
+        description: "Premium quality jeans"
     },
     {
         id: 5,
-        name: "Casual Shorts",
-        category: "men",
-        price: 129000,
-        image: "https://images.unsplash.com/photo-1555082891-6c27db76f739?w=400&h=400&fit=crop",
-        description: "Perfect casual shorts"
+        name: "Floral Dress",
+        category: "women",
+        price: 189000,
+        image: "https://images.unsplash.com/photo-1595777712802-14158a84b64a?w=500&h=500&fit=crop",
+        description: "Elegant floral dress"
     },
     {
         id: 6,
-        name: "Sunglasses",
-        category: "accessories",
-        price: 299000,
-        image: "https://images.unsplash.com/photo-1572635196237-14b3f281503f?w=400&h=400&fit=crop",
-        description: "Trendy sunglasses"
+        name: "Yoga Leggings",
+        category: "women",
+        price: 149000,
+        image: "https://images.unsplash.com/photo-1556821552-5ff63b1b0e59?w=500&h=500&fit=crop",
+        description: "Comfortable yoga leggings"
     },
     {
         id: 7,
-        name: "Fashion Belt",
-        category: "accessories",
-        price: 79000,
-        image: "https://images.unsplash.com/photo-1553062407-98eeb64c6a62?w=400&h=400&fit=crop",
-        description: "Stylish leather belt"
+        name: "Silk Blouse",
+        category: "women",
+        price: 229000,
+        image: "https://images.unsplash.com/photo-1572802419224-291b03597359?w=500&h=500&fit=crop",
+        description: "Luxurious silk blouse"
     },
     {
         id: 8,
-        name: "Women Jeans",
+        name: "Denim Skirt",
         category: "women",
+        price: 159000,
+        image: "https://images.unsplash.com/photo-1543163521-1bf539c55dd2?w=500&h=500&fit=crop",
+        description: "Classic denim skirt"
+    },
+    {
+        id: 9,
+        name: "Leather Belt",
+        category: "accessories",
+        price: 179000,
+        image: "https://images.unsplash.com/photo-1553062407-98eeb64c6a62?w=500&h=500&fit=crop",
+        description: "Genuine leather belt"
+    },
+    {
+        id: 10,
+        name: "Stylish Sunglasses",
+        category: "accessories",
+        price: 249000,
+        image: "https://images.unsplash.com/photo-1572635196237-14b3f281503f?w=500&h=500&fit=crop",
+        description: "Trendy sunglasses"
+    },
+    {
+        id: 11,
+        name: "Leather Wallet",
+        category: "accessories",
         price: 199000,
-        image: "https://images.unsplash.com/photo-1542272604-787c62d465d1?w=400&h=400&fit=crop",
-        description: "Premium quality jeans"
+        image: "https://images.unsplash.com/photo-1608252787056-362f0f9324ec?w=500&h=500&fit=crop",
+        description: "Genuine leather wallet"
+    },
+    {
+        id: 12,
+        name: "Canvas Cap",
+        category: "accessories",
+        price: 129000,
+        image: "https://images.unsplash.com/photo-1516728180891-5f5bfa097dc0?w=500&h=500&fit=crop",
+        description: "Classic canvas cap"
     }
 ];
 
