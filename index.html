@@ -3,10 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LoopWearSquad - Fashion Store</title>
+    <title>LoopWearSquad — Streetwear Store | Kaos, Hoodie, Knitwear</title>
+    <meta name="description" content="LoopWearSquad — koleksi streetwear Indonesia. Kaos, hoodie, dan knitwear premium. Diskon launching 20% untuk semua produk.">
+    <meta name="theme-color" content="#2c3e50">
+
+    <!-- PWA -->
+    <link rel="manifest" href="manifest.webmanifest">
+    <link rel="icon" type="image/png" sizes="192x192" href="icons/icon-192.png">
+    <link rel="apple-touch-icon" href="icons/icon-192.png">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-title" content="LoopWearSquad">
+    <meta name="mobile-web-app-capable" content="yes">
+
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="LoopWearSquad — New Collection 2026">
+    <meta property="og:description" content="Kaos, hoodie, knitwear premium. Diskon launching 20%.">
+    <meta property="og:image" content="https://rijalmafaza081.github.io/loopwearsquad/images/kaos.jpg">
+
     <!-- Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-CPDF1S9VXW"></script>
     <script>
@@ -17,21 +34,39 @@
     </script>
 </head>
 <body>
+    <!-- Promo Bar -->
+    <div class="promo-bar" id="promoBar">
+        <div class="promo-bar-track">
+            <span class="promo-item">🔥 LAUNCHING PROMO — DISKON 20% SEMUA PRODUK</span>
+            <span class="promo-sep">•</span>
+            <span class="promo-item">🚚 GRATIS ONGKIR MIN. BELANJA Rp500.000</span>
+            <span class="promo-sep">•</span>
+            <span class="promo-item">🔥 LAUNCHING PROMO — DISKON 20% SEMUA PRODUK</span>
+            <span class="promo-sep">•</span>
+            <span class="promo-item">🚚 GRATIS ONGKIR MIN. BELANJA Rp500.000</span>
+        </div>
+    </div>
+
     <!-- Header & Navigation -->
     <header class="header">
         <nav class="navbar">
             <div class="container">
                 <div class="logo">
-                    <h1>LoopWearSquad</h1>
+                    <a href="index.html"><h1>LoopWearSquad</h1></a>
                 </div>
                 <ul class="nav-menu">
-                    <li><a href="#home">Home</a></li>
-                    <li><a href="#products">Shop</a></li>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#contact">Contact</a></li>
+                    <li><a href="index.html#home">Home</a></li>
+                    <li><a href="index.html#products">Shop</a></li>
+                    <li><a href="index.html#size-guide">Size Guide</a></li>
+                    <li><a href="index.html#about">About</a></li>
+                    <li><a href="index.html#contact">Contact</a></li>
                 </ul>
                 <div class="nav-icons">
-                    <button class="cart-btn" onclick="toggleCart()">
+                    <button class="install-btn hidden" id="installBtn" title="Install aplikasi">
+                        <i class="fas fa-download"></i>
+                        <span class="install-label">Install</span>
+                    </button>
+                    <button class="cart-btn" onclick="toggleCart()" aria-label="Keranjang belanja">
                         <i class="fas fa-shopping-cart"></i>
                         <span class="cart-count">0</span>
                     </button>
@@ -43,17 +78,32 @@
     <!-- Hero Section -->
     <section id="home" class="hero">
         <div class="hero-content">
-            <h2 class="hero-title">New Collection 2026</h2>
-            <p class="hero-subtitle">Discover Your Style with LoopWearSquad</p>
-            <a href="#products" class="btn btn-primary">Shop Now</a>
+            <span class="hero-badge">NEW COLLECTION 2026</span>
+            <h2 class="hero-title">Discover Your Style</h2>
+            <p class="hero-subtitle">Streetwear harian dengan bahan premium. Dari kaos sampai knitwear.</p>
+            <div class="hero-promo">
+                <span class="hero-promo-label">Diskon Launching</span>
+                <span class="hero-promo-value">20% OFF</span>
+                <span class="hero-promo-off">Semua produk</span>
+            </div>
+            <div class="countdown" id="heroCountdown" role="timer" aria-label="Hitung mundur promo">
+                <div class="cd-unit"><span class="cd-value" id="cdDays">00</span><span class="cd-label">Hari</span></div>
+                <div class="cd-sep">:</div>
+                <div class="cd-unit"><span class="cd-value" id="cdHours">00</span><span class="cd-label">Jam</span></div>
+                <div class="cd-sep">:</div>
+                <div class="cd-unit"><span class="cd-value" id="cdMins">00</span><span class="cd-label">Menit</span></div>
+                <div class="cd-sep">:</div>
+                <div class="cd-unit"><span class="cd-value" id="cdSecs">00</span><span class="cd-label">Detik</span></div>
+            </div>
+            <a href="#products" class="btn btn-primary btn-lg">Shop Now</a>
         </div>
     </section>
 
     <!-- Filter Section -->
     <section class="filter-section">
         <div class="container">
-            <div class="filter-buttons">
-                <button class="filter-btn active" data-category="all">All Products</button>
+            <div class="filter-buttons" id="filterButtons">
+                <button class="filter-btn active" data-category="all">Semua</button>
                 <button class="filter-btn" data-category="kaos">Kaos</button>
                 <button class="filter-btn" data-category="hoodie">Hoodie</button>
                 <button class="filter-btn" data-category="knitwear">Knitwear</button>
@@ -64,29 +114,48 @@
     <!-- Products Section -->
     <section id="products" class="products-section">
         <div class="container">
-            <h2 class="section-title">Our Products</h2>
-            <div class="products-grid" id="productsGrid">
-                <!-- Products will be loaded dynamically -->
+            <h2 class="section-title">Produk Kami</h2>
+            <p class="section-subtitle">Harga sudah termasuk diskon launching 20%</p>
+            <div class="products-grid" id="productsGrid"></div>
+        </div>
+    </section>
+
+    <!-- Size Guide Section -->
+    <section id="size-guide" class="size-guide-section">
+        <div class="container">
+            <h2 class="section-title">Panduan Ukuran</h2>
+            <p class="section-subtitle">Ukur badan Anda dalam cm, lalu pilih ukuran yang paling sesuai</p>
+            <div class="size-guide-tabs" id="sizeGuideTabs">
+                <button class="size-tab active" data-cat="kaos">Kaos</button>
+                <button class="size-tab" data-cat="hoodie">Hoodie</button>
+                <button class="size-tab" data-cat="knitwear">Knitwear</button>
             </div>
+            <div id="sizeGuideContainer"></div>
+            <p class="size-help"><i class="fas fa-info-circle"></i> Bingung? WhatsApp kami untuk panduan ukuran personal — balas di hari yang sama.</p>
         </div>
     </section>
 
     <!-- About Section -->
     <section id="about" class="about-section">
         <div class="container">
-            <h2 class="section-title">About LoopWearSquad</h2>
+            <h2 class="section-title">Tentang LoopWearSquad</h2>
             <p class="about-text">
-                LoopWearSquad adalah destinasi fashion terpercaya Anda. Kami menyediakan koleksi pakaian 
-                dan aksesori berkualitas tinggi dengan desain terkini. Dari streetwear hingga formal wear, 
+                LoopWearSquad adalah destinasi fashion terpercaya Anda. Kami menyediakan koleksi pakaian
+                dan aksesori berkualitas tinggi dengan desain terkini. Dari streetwear hingga formal wear,
                 temukan gaya Anda bersama kami.
             </p>
+            <div class="about-features">
+                <div class="about-feature"><i class="fas fa-truck"></i><p>Ongkir gratis min. Rp500.000</p></div>
+                <div class="about-feature"><i class="fas fa-undo"></i><p>Tukar ukuran 7 hari</p></div>
+                <div class="about-feature"><i class="fas fa-check-circle"></i><p>Quality control tiap item</p></div>
+            </div>
         </div>
     </section>
 
     <!-- Contact Section -->
     <section id="contact" class="contact-section">
         <div class="container">
-            <h2 class="section-title">Contact Us</h2>
+            <h2 class="section-title">Kontak Kami</h2>
             <div class="contact-info">
                 <div class="contact-item">
                     <i class="fas fa-phone"></i>
@@ -107,29 +176,36 @@
     <!-- Shopping Cart Sidebar -->
     <div class="cart-sidebar" id="cartSidebar">
         <div class="cart-header">
-            <h3>Shopping Cart</h3>
-            <button class="close-cart" onclick="toggleCart()">
+            <h3>Keranjang Belanja</h3>
+            <button class="close-cart" onclick="toggleCart()" aria-label="Tutup keranjang">
                 <i class="fas fa-times"></i>
             </button>
         </div>
-        <div class="cart-items" id="cartItems">
-            <!-- Cart items will be added here -->
-        </div>
+        <div class="cart-items" id="cartItems"></div>
         <div class="cart-footer">
+            <div class="cart-subtotal">
+                <span>Subtotal</span>
+                <span id="cartSubtotal">Rp 0</span>
+            </div>
             <div class="cart-total">
                 <span>Total:</span>
                 <span id="cartTotal">Rp 0</span>
             </div>
-            <button class="btn btn-primary btn-block" onclick="checkoutWhatsApp()">
+            <div class="cart-freeship" id="cartFreeShip"></div>
+            <button class="btn btn-whatsapp btn-block" onclick="checkoutWhatsApp()">
                 <i class="fab fa-whatsapp"></i> Checkout via WhatsApp
             </button>
         </div>
     </div>
 
+    <!-- Cart Overlay -->
+    <div class="cart-overlay" id="cartOverlay" onclick="toggleCart()"></div>
+
     <!-- WhatsApp Floating Button -->
-    <a href="https://wa.me/6285748234562?text=Halo%20LoopWearSquad,%20saya%20mau%20bertanya%20tentang%20produk" 
-       class="whatsapp-float" 
-       target="_blank">
+    <a href="https://wa.me/6285748234562?text=Halo%20LoopWearSquad,%20saya%20mau%20bertanya%20tentang%20produk"
+       class="whatsapp-float"
+       target="_blank" rel="noopener"
+       id="waFloat">
         <i class="fab fa-whatsapp"></i>
     </a>
 
@@ -137,9 +213,15 @@
     <footer class="footer">
         <div class="container">
             <p>&copy; 2026 LoopWearSquad. All rights reserved.</p>
+            <p class="footer-links">
+                <a href="index.html#products">Shop</a> ·
+                <a href="index.html#size-guide">Size Guide</a> ·
+                <a href="index.html#about">About</a>
+            </p>
         </div>
     </footer>
 
+    <script src="data/products.js"></script>
     <script src="script.js"></script>
 </body>
 </html>
